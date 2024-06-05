@@ -30,17 +30,17 @@
 
 <div>
   <div class="m-5 p-4 rounded-lg bg-white">
-    <div class="bg-gray-200 p-2 rounded-md">
+    <div class="bg-blue-200 p-2 rounded-md">
       <h2 class="font-bold text-2xl">{data.first_name} {data.last_name}</h2>
       <p class="text-xl">{data.headline}</p>
       <a href={data.url} class="text-blue-500 hover:underline">LinkedIn</a>
 
     </div>
     <div class="card-body">
-      <div class="my-2 bg-gray-200 p-2 rounded-md">
+      <div class="my-2 bg-green-200 p-2 rounded-md">
         <p class="text-3xl">Werkervaring</p>
         {#each Array.from(data.experiences) as experience}
-          <div class="border-t mt-5">
+          <div class="border-black border-t-2 pt-2">
             <p class="text-lg font-bold">{experience.title}</p>
             <p>{experience.company}</p>
             <p>
@@ -52,10 +52,10 @@
           </div>
         {/each}
       </div>
-      <div class="my-2 bg-gray-200 p-2 rounded-md">
+      <div class="my-2 bg-yellow-200 p-2 rounded-md">
         <p class="text-3xl">Opleiding</p>
         {#each Array.from(data.educations) as education}
-          <div class="border-t pt-2">
+          <div class="border-black border-t-2 pt-2">
             <p class="text-lg font-bold">{education.school}</p>
             {#if education.degree}
               <p>{education.degree}, {education.field_of_study}</p>
@@ -66,10 +66,10 @@
           </div>
         {/each}
       </div>
-      <div class="my-2 bg-gray-200 p-2 rounded-md">
+      <div class="my-2 bg-orange-200 p-2 rounded-md">
         <p class="text-3xl">Vaardigheden</p>
         {#each Array.from(data.skills) as skill}
-          <div class="border-t pt-2">
+          <div class="border-black border-t-2 pt-2">
             <p>{skill.skill_name}</p>
           </div>
         {/each}
